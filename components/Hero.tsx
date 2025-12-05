@@ -48,7 +48,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-24 sm:pb-20 relative overflow-hidden"
     >
       <motion.div
         variants={containerVariants}
@@ -95,7 +95,7 @@ export default function Hero() {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-start items-start"
+          className="flex flex-col sm:flex-row gap-4 justify-start items-start mb-16 sm:mb-0"
         >
           <motion.button
             whileHover={{ 
@@ -123,7 +123,7 @@ export default function Hero() {
       {/* Centered down arrow at bottom of hero section */}
       <motion.div
         variants={itemVariants}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10"
       >
         <motion.button
           onClick={scrollToAbout}
