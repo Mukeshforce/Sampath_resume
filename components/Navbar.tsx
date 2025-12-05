@@ -47,7 +47,7 @@ export default function Navbar() {
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl font-bold gradient-text cursor-pointer"
+            className="text-2xl font-bold text-[#14b8a6] cursor-pointer"
             onClick={() => scrollToSection("#hero")}
           >
             SA.
@@ -70,14 +70,14 @@ export default function Navbar() {
                 className="text-slate-300 hover:text-white transition-colors text-sm font-medium relative group"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#14b8a6] group-hover:w-full transition-all duration-300"></span>
               </motion.a>
             ))}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection("#contact")}
-              className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded-full hover:shadow-lg hover:shadow-pink-500/50 transition-all text-sm font-medium"
+              className="px-6 py-2 bg-transparent border-2 border-[#14b8a6] text-white rounded-full hover:bg-[#14b8a6]/10 transition-all text-sm font-medium"
             >
               Contact
             </motion.button>

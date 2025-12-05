@@ -5,14 +5,12 @@ import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
-import BackgroundAnimation from "@/components/BackgroundAnimation";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen">
       <ScrollProgress />
-      <BackgroundAnimation />
       <Navbar />
       <Hero />
       <About />

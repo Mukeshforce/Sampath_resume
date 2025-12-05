@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0f;
+  --background: #0a1929;
   --foreground: #ffffff;
-  --primary: #6366f1;
-  --primary-light: #818cf8;
-  --accent: #ec4899;
-  --accent-light: #f472b6;
+  --primary: #14b8a6;
+  --primary-light: #2dd4bf;
+  --accent: #14b8a6;
+  --accent-light: #5eead4;
+  --teal: #14b8a6;
+  --teal-light: #2dd4bf;
+  --teal-dark: #0d9488;
 }
 
 @theme inline {
@@ -29,7 +32,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+  background: #0a1929;
   color: #ffffff;
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
@@ -37,17 +40,7 @@ body {
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 /* Custom scrollbar */
@@ -56,16 +49,16 @@ body::before {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0f;
+  background: #0a1929;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6366f1 0%, #ec4899 100%);
+  background: linear-gradient(180deg, #14b8a6 0%, #2dd4bf 100%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #818cf8 0%, #f472b6 100%);
+  background: linear-gradient(180deg, #2dd4bf 0%, #5eead4 100%);
 }
 
 /* Smooth animations */
@@ -75,7 +68,7 @@ body::before {
 
 /* Selection color */
 ::selection {
-  background-color: rgba(99, 102, 241, 0.3);
+  background-color: rgba(20, 184, 166, 0.3);
   color: #ffffff;
 }
 
@@ -96,7 +89,7 @@ body::before {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  background: linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -135,10 +128,10 @@ body::before {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.5);
   }
   50% {
-    box-shadow: 0 0 40px rgba(236, 72, 153, 0.8);
+    box-shadow: 0 0 40px rgba(20, 184, 166, 0.8);
   }
 }
 
@@ -198,9 +191,9 @@ body::before {
 .text-gradient-animated {
   background: linear-gradient(
     90deg,
-    #6366f1 0%,
-    #ec4899 50%,
-    #6366f1 100%
+    #14b8a6 0%,
+    #2dd4bf 50%,
+    #14b8a6 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -216,7 +209,7 @@ body::before {
 
 .hover-lift:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 30px rgba(20, 184, 166, 0.3);
 }
 
 /* Scroll reveal animation */

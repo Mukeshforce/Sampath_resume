@@ -49,6 +49,7 @@ export const resumeData: ResumeData = {
     description:
       "Salesforce Certified Professional and Technical Architect (Lightning Champion) with over 15 years of hardcore development and implementation experience across 50+ projects in the Middle East, India, US, and UK. Deep expertise in architecting, developing, and deploying end-to-end Salesforce solutions, with strong focus on integrations with leading ERPs and databases.",
     email: "sampatharjunan@hotmail.com",
+    github: "https://github.com/sampath-arjunan",
     linkedin: "https://www.linkedin.com/in/sampatharjunan/",
     trailhead: "https://www.salesforce.com/trailblazer/sampatharjunan",
     lightningChampions:

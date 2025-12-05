@@ -54,114 +54,97 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-5xl w-full text-center relative z-10"
+        className="max-w-5xl w-full text-left relative z-10"
       >
         <motion.div
           variants={itemVariants}
           className="inline-block mb-6 relative"
         >
           <motion.span
-            whileHover={{ scale: 1.1, rotate: [0, -5, 5, -5, 0] }}
-            className="px-4 py-2 glass rounded-full text-sm text-indigo-400 font-medium inline-flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            className="text-sm text-[#14b8a6] font-medium inline-block"
           >
-            <motion.span
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            >
-              👋
-            </motion.span>
-            Welcome to my portfolio
+            Hello, my name is
           </motion.span>
         </motion.div>
 
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight relative"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight relative text-left"
         >
-          <span className="gradient-text block">
+          <span className="text-white block">
             {resumeData.personal.name}
           </span>
         </motion.h1>
 
         <motion.h2
           variants={itemVariants}
-          className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-300 mb-8"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-400 mb-8 text-left"
         >
-          <span className="inline-block text-slate-200">
+          <span className="inline-block">
             {resumeData.personal.subtitle}
           </span>
         </motion.h2>
 
         <motion.p
           variants={itemVariants}
-          className="text-slate-400 text-lg sm:text-xl max-w-3xl mx-auto mb-12 leading-relaxed"
+          className="text-white text-lg sm:text-xl max-w-3xl mb-12 leading-relaxed text-left"
         >
           {resumeData.personal.description}
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-4 justify-start items-start"
         >
           <motion.button
             whileHover={{ 
               scale: 1.03, 
-              boxShadow: "0 10px 40px rgba(236, 72, 153, 0.35)",
+              boxShadow: "0 10px 40px rgba(20, 184, 166, 0.35)",
             }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToContact}
-            className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded-full font-semibold text-lg shadow-lg shadow-pink-500/50 hover:shadow-xl hover:shadow-pink-500/60 transition-all relative overflow-hidden group"
+            className="px-8 py-4 bg-transparent border-2 border-[#14b8a6] text-white rounded-full font-semibold text-lg hover:bg-[#14b8a6]/10 transition-all"
           >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-pink-500 to-indigo-500"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: "100%" }}
-              transition={{ duration: 0.6 }}
-            />
-            <span className="relative z-10">Get In Touch</span>
+            Get In Touch
           </motion.button>
           <motion.a
-            whileHover={{ scale: 1.05, rotate: [0, 5, -5, 0] }}
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.95 }}
             href="/Sampath_Resume.pdf"
             download
-            className="px-8 py-4 glass rounded-full text-white hover:bg-white/10 transition-all font-semibold text-lg border border-white/20 relative overflow-hidden group"
+            className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full hover:bg-white/10 transition-all font-semibold text-lg"
           >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-pink-500/20"
-              initial={{ scale: 0 }}
-              whileHover={{ scale: 1 }}
-              transition={{ duration: 0.3 }}
-            />
-            <span className="relative z-10">Download Resume</span>
+            Download Resume
           </motion.a>
         </motion.div>
+      </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          className="mt-20"
+      {/* Centered down arrow at bottom of hero section */}
+      <motion.div
+        variants={itemVariants}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+      >
+        <motion.button
+          onClick={scrollToAbout}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          whileHover={{ scale: 1.2 }}
+          className="text-slate-400 hover:text-white transition-colors relative group"
         >
-          <motion.button
-            onClick={scrollToAbout}
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            whileHover={{ scale: 1.2 }}
-            className="text-slate-400 hover:text-white transition-colors relative group"
-          >
-            <ArrowDown className="w-6 h-6 mx-auto" />
-            <motion.div
-              className="absolute inset-0 border-2 border-indigo-500/30 rounded-full"
-              animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.5, 0, 0.5],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-              }}
-            />
-          </motion.button>
-        </motion.div>
+          <ArrowDown className="w-6 h-6 mx-auto" />
+          <motion.div
+            className="absolute inset-0 border-2 border-[#14b8a6]/30 rounded-full"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.5, 0, 0.5],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+            }}
+          />
+        </motion.button>
       </motion.div>
     </section>
   );
