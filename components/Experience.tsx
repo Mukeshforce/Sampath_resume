@@ -29,7 +29,7 @@ export default function Experience() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-indigo-400 font-mono text-sm mb-4 block"
+            className="text-[#14b8a6] font-mono text-sm mb-4 block"
           >
             02. Where I&apos;ve Worked
           </motion.span>
@@ -45,7 +45,7 @@ export default function Experience() {
             initial={{ width: 0 }}
             animate={isInView ? { width: 96 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto"
+            className="h-1 bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] mx-auto"
           />
         </motion.div>
 
@@ -57,7 +57,7 @@ export default function Experience() {
               initial={{ scaleY: 0 }}
               animate={isInView ? { scaleY: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-              className="hidden lg:block absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-pink-500 to-indigo-500 origin-top"
+              className="hidden lg:block absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#14b8a6] via-[#2dd4bf] to-[#14b8a6] origin-top"
             />
             {resumeData.experience.map((exp, index) => (
               <motion.button
@@ -70,12 +70,12 @@ export default function Experience() {
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-4 text-left whitespace-nowrap border-b-2 lg:border-b-0 lg:border-l-2 transition-all rounded-lg lg:rounded-l-lg lg:rounded-r-none relative group ${
                   activeTab === index
-                    ? "border-indigo-500 text-white bg-gradient-to-r from-indigo-500/20 to-pink-500/20"
+                    ? "border-[#14b8a6] text-white bg-gradient-to-r from-[#14b8a6]/20 to-[#2dd4bf]/20"
                     : "border-transparent text-slate-400 hover:text-white hover:bg-white/5"
                 }`}
               >
                 <motion.div
-                  className="hidden lg:block absolute -left-2 top-1/2 w-3.5 h-3.5 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 border-2 border-background"
+                  className="hidden lg:block absolute -left-2 top-1/2 w-3.5 h-3.5 rounded-full bg-gradient-to-br from-[#14b8a6] to-[#2dd4bf] border-2 border-background"
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ duration: 0.3, delay: 0.3 + index * 0.08, ease: "easeOut" }}
@@ -84,7 +84,7 @@ export default function Experience() {
                 {activeTab === index && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-pink-500/10 rounded-lg"
+                    className="absolute inset-0 bg-gradient-to-r from-[#14b8a6]/10 to-[#2dd4bf]/10 rounded-lg"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -107,14 +107,14 @@ export default function Experience() {
                       className="glass-strong rounded-2xl p-8 border border-white/20 relative overflow-hidden group"
                     >
                       {/* Soft static background gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-pink-500/5 to-purple-500/5" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#14b8a6]/5 via-[#2dd4bf]/5 to-[#5eead4]/5" />
                       
                       <div className="relative z-10">
                         <div className="flex items-start gap-4 mb-6">
                           <motion.div
                             whileHover={{ scale: 1.05, y: -2 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
-                            className="p-3 bg-gradient-to-br from-indigo-500 to-pink-500 rounded-lg shadow-lg shadow-indigo-500/50"
+                            className="p-3 bg-gradient-to-br from-[#14b8a6] to-[#2dd4bf] rounded-lg shadow-lg shadow-[#14b8a6]/50"
                           >
                             <Briefcase className="w-6 h-6 text-white" />
                           </motion.div>
@@ -131,7 +131,7 @@ export default function Experience() {
                               initial={{ opacity: 0, y: 8 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ duration: 0.35, delay: 0.18, ease: "easeOut" }}
-                              className="text-indigo-400 font-semibold mb-2 flex items-center gap-2"
+                              className="text-[#14b8a6] font-semibold mb-2 flex items-center gap-2"
                             >
                               <MapPin className="w-4 h-4" />
                               @ {exp.company}
@@ -161,7 +161,7 @@ export default function Experience() {
                               whileHover={{ x: 3 }}
                               className="text-slate-300 flex items-start gap-3 text-lg group/item"
                             >
-                              <span className="text-indigo-400 mt-2 flex-shrink-0">▹</span>
+                              <span className="text-[#14b8a6] mt-2 flex-shrink-0">▹</span>
                               <span className="group-hover/item:text-white transition-colors">{item}</span>
                             </motion.li>
                           ))}

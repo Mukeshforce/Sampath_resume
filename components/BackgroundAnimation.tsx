@@ -12,7 +12,7 @@ const Particle = ({ delay = 0 }: { delay?: number }) => {
 
   return (
     <motion.div
-      className="absolute w-1 h-1 bg-indigo-400/30 rounded-full"
+      className="absolute w-1 h-1 bg-[#14b8a6]/30 rounded-full"
       initial={{
         x: `${position.x}vw`,
         y: `${position.y}vh`,
@@ -49,7 +49,7 @@ export default function BackgroundAnimation() {
       {/* Animated gradient orbs with parallax effect */}
       <motion.div
         style={{ opacity, scale }}
-        className="absolute top-20 left-20 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"
+        className="absolute top-20 left-20 w-96 h-96 bg-[#14b8a6]/20 rounded-full blur-3xl"
         animate={{
           x: [0, 100, 50, 0],
           y: [0, 50, 100, 0],
@@ -63,7 +63,7 @@ export default function BackgroundAnimation() {
       />
       <motion.div
         style={{ opacity }}
-        className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-pink-500/20 rounded-full blur-3xl"
+        className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-[#2dd4bf]/20 rounded-full blur-3xl"
         animate={{
           x: [0, -100, -50, 0],
           y: [0, -50, -100, 0],
@@ -112,8 +112,8 @@ export default function BackgroundAnimation() {
         style={{
           opacity,
           backgroundImage: `
-            linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px)
+            linear-gradient(rgba(20, 184, 166, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(20, 184, 166, 0.1) 1px, transparent 1px)
           `,
           backgroundSize: '50px 50px',
         }}
@@ -155,12 +155,12 @@ export default function BackgroundAnimation() {
         />
         <defs>
           <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#6366f1" stopOpacity="1" />
-            <stop offset="100%" stopColor="#ec4899" stopOpacity="1" />
+            <stop offset="0%" stopColor="#14b8a6" stopOpacity="1" />
+            <stop offset="100%" stopColor="#2dd4bf" stopOpacity="1" />
           </linearGradient>
           <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#ec4899" stopOpacity="1" />
-            <stop offset="100%" stopColor="#6366f1" stopOpacity="1" />
+            <stop offset="0%" stopColor="#2dd4bf" stopOpacity="1" />
+            <stop offset="100%" stopColor="#14b8a6" stopOpacity="1" />
           </linearGradient>
         </defs>
       </svg>

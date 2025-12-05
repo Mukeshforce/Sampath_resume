@@ -36,7 +36,7 @@ export default function Skills() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-indigo-400 font-mono text-sm mb-4 block"
+            className="text-[#14b8a6] font-mono text-sm mb-4 block"
           >
             03. My Skills
           </motion.span>
@@ -52,7 +52,7 @@ export default function Skills() {
             initial={{ width: 0 }}
             animate={isInView ? { width: 96 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto"
+            className="h-1 bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] mx-auto"
           />
         </motion.div>
 
@@ -72,11 +72,11 @@ export default function Skills() {
                 scale: 1.02,
                 transition: { duration: 0.25, ease: "easeOut" },
               }}
-              className="glass-strong rounded-2xl p-8 border border-white/20 hover:border-indigo-500/50 transition-all group relative overflow-hidden"
+              className="glass-strong rounded-2xl p-8 border border-white/20 hover:border-[#14b8a6]/50 transition-all group relative overflow-hidden"
             >
               {/* Soft background glow */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-pink-500/10 to-purple-500/10"
+                className="absolute inset-0 bg-gradient-to-br from-[#14b8a6]/10 via-[#2dd4bf]/10 to-[#5eead4]/10"
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -84,7 +84,7 @@ export default function Skills() {
               
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-gradient-to-br from-indigo-500 to-pink-500 rounded-lg text-white relative overflow-hidden shadow-md shadow-indigo-500/40">
+                  <div className="p-3 bg-gradient-to-br from-[#14b8a6] to-[#2dd4bf] rounded-lg text-white relative overflow-hidden shadow-md shadow-[#14b8a6]/40">
                     <div className="relative z-10">
                       {iconMap[category.name] || <Code className="w-6 h-6" />}
                     </div>
@@ -114,11 +114,11 @@ export default function Skills() {
                       }}
                       onHoverStart={() => setHoveredSkill(skill)}
                       onHoverEnd={() => setHoveredSkill(null)}
-                      className="px-4 py-2 glass rounded-lg text-slate-300 text-sm font-medium border border-white/10 hover:border-indigo-500/50 hover:text-white transition-all cursor-default relative overflow-hidden group/skill"
+                      className="px-4 py-2 glass rounded-lg text-slate-300 text-sm font-medium border border-white/10 hover:border-[#14b8a6]/50 hover:text-white transition-all cursor-default relative overflow-hidden group/skill"
                     >
                       {hoveredSkill === skill && (
                         <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 blur-xl"
+                          className="absolute inset-0 bg-gradient-to-r from-[#14b8a6]/20 to-[#2dd4bf]/20 blur-xl"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}

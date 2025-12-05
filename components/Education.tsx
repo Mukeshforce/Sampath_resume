@@ -23,11 +23,11 @@ export default function Education() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <span className="text-indigo-400 font-mono text-sm mb-4 block">04. Education</span>
+          <span className="text-[#14b8a6] font-mono text-sm mb-4 block">04. Education</span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
             My <span className="gradient-text">Education</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] mx-auto"></div>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-6">
@@ -38,12 +38,12 @@ export default function Education() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.18, ease: "easeOut" }}
               whileHover={{ y: -4, scale: 1.02, transition: { duration: 0.2 } }}
-              className="glass-strong rounded-2xl p-8 border-l-4 border-indigo-500 hover:border-pink-500 transition-all relative overflow-hidden group"
+              className="glass-strong rounded-2xl p-8 border-l-4 border-[#14b8a6] hover:border-[#2dd4bf] transition-all relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/10 to-pink-500/10 rounded-full blur-2xl -z-0"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#14b8a6]/10 to-[#2dd4bf]/10 rounded-full blur-2xl -z-0"></div>
               <div className="relative z-10">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 bg-gradient-to-br from-indigo-500 to-pink-500 rounded-lg group-hover:scale-110 transition-transform">
+                  <div className="p-3 bg-gradient-to-br from-[#14b8a6] to-[#2dd4bf] rounded-lg group-hover:scale-110 transition-transform">
                     <GraduationCap className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -51,11 +51,11 @@ export default function Education() {
                       <h3 className="text-2xl font-bold text-white mb-1">
                         {edu.institution}
                       </h3>
-                      <span className="text-indigo-400 font-mono text-sm font-semibold">
+                      <span className="text-[#14b8a6] font-mono text-sm font-semibold">
                         {edu.year}
                       </span>
                     </div>
-                    <p className="text-pink-400 text-lg font-semibold mb-2">{edu.degree}</p>
+                    <p className="text-[#2dd4bf] text-lg font-semibold mb-2">{edu.degree}</p>
                     {edu.description && (
                       <p className="text-slate-300">{edu.description}</p>
                     )}

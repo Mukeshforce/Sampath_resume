@@ -23,8 +23,8 @@ const config: Config = {
           "50%": { transform: "translateY(-20px)" },
         },
         glow: {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(99, 102, 241, 0.5)" },
-          "50%": { boxShadow: "0 0 40px rgba(236, 72, 153, 0.8)" },
+          "0%, 100%": { boxShadow: "0 0 20px rgba(20, 184, 166, 0.5)" },
+          "50%": { boxShadow: "0 0 40px rgba(20, 184, 166, 0.8)" },
         },
         shimmer: {
           "0%": { backgroundPosition: "-1000px 0" },

@@ -24,7 +24,7 @@ export default function About() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center"
         >
-          <p className="text-indigo-400 font-mono text-xs sm:text-sm mb-3 tracking-[0.25em] uppercase">
+          <p className="text-[#14b8a6] font-mono text-xs sm:text-sm mb-3 tracking-[0.25em] uppercase">
             01 · About
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">
@@ -50,7 +50,7 @@ export default function About() {
                 transition={{ duration: 0.25, ease: "easeOut" }}
                 className="relative"
               >
-                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-indigo-500/30 via-pink-500/30 to-purple-500/30">
+                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-[#14b8a6]/30 via-[#2dd4bf]/30 to-[#5eead4]/30">
                   <Image
                     src="/download.jpeg"
                     alt={resumeData.personal.name}
@@ -67,7 +67,7 @@ export default function About() {
                 <p className="text-xl font-semibold text-white">
                   {resumeData.personal.name}
                 </p>
-                <p className="text-sm sm:text-base text-indigo-300 font-medium">
+                <p className="text-sm sm:text-base text-[#2dd4bf] font-medium">
                   {resumeData.personal.title}
                 </p>
                 {resumeData.personal.location && (
@@ -79,7 +79,7 @@ export default function About() {
 
               <div className="grid gap-3 text-xs sm:text-sm text-slate-200">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500/20 text-indigo-300 text-sm">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#14b8a6]/20 text-[#2dd4bf] text-sm">
                     ✉️
                   </span>
                   <div className="flex-1">
@@ -88,7 +88,7 @@ export default function About() {
                     </p>
                     <a
                       href={`mailto:${resumeData.personal.email}`}
-                      className="text-xs sm:text-sm text-indigo-200 hover:text-white underline underline-offset-4"
+                      className="text-xs sm:text-sm text-[#2dd4bf] hover:text-white underline underline-offset-4"
                     >
                       {resumeData.personal.email}
                     </a>
@@ -152,7 +152,7 @@ export default function About() {
                     href={resumeData.personal.lightningChampions}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-3 py-1.5 rounded-full border border-indigo-400/50 text-[11px] sm:text-xs text-indigo-200 hover:text-white hover:bg-indigo-500/30 transition-colors"
+                    className="px-3 py-1.5 rounded-full border border-[#14b8a6]/50 text-[11px] sm:text-xs text-[#2dd4bf] hover:text-white hover:bg-[#14b8a6]/30 transition-colors"
                   >
                     Lightning Champions
                   </a>
